@@ -44,4 +44,109 @@
       padding: 20px;
       border-radius: 12px;
       margin-top: 25px;
-      box-shadow: 0
+      box-shadow: 0 0 10px #e7dada;
+    }
+
+    .section p, li {
+      line-height: 1.6;
+    }
+
+    .job-title {
+      font-weight: bold;
+      color: #5a7a5a;
+    }
+
+    .location-date {
+      font-style: italic;
+      color: #777;
+    }
+
+    .contact {
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🍵 Banner and Floating Profile -->
+  <div style="position: relative; text-align: center;">
+    <img src="banner.jpg" alt="Matcha banner"
+         style="width: 100%; border-radius: 0 0 30px 30px; box-shadow: 0 6px 14px rgba(0,0,0,0.1);" />
+
+    <img src="profile.jpg" alt="Profile"
+         style="
+           width: 140px;
+           height: 140px;
+           border-radius: 50%;
+           border: 4px solid white;
+           object-fit: cover;
+           position: absolute;
+           bottom: -70px;
+           left: 50%;
+           transform: translateX(-50%);
+           box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+         " />
+  </div>
+
+  <!-- Spacer -->
+  <div style="height: 90px;"></div>
+
+  <!-- Intro Text -->
+  <div style="text-align: center;">
+    <h1>Hi, I’m Ellen 𐙚⋆.˚</h1>
+    <p class="contact">Cupertino, CA • ellenjo250@gmail.com • (650) 680–5542</p>
+    <a class="button" href="https://www.linkedin.com/in/ellen-yeyoung-jo" target="_blank">LinkedIn</a>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <p><strong>University of Illinois at Urbana-Champaign</strong> — B.S. in Computer Science + Music, Business Minor<br>
+    <span class="location-date">Urbana, Champaign — Expected September 2028</span><br>
+    Honors & Organizations: James Scholars, Women in CS, SWE, Project Code, KASA Social Media Board, Project Code</p>
+  </div>
+
+  <div class="section">
+    <h2>Work Experience</h2>
+    <p class="job-title">Cepton / Koito Group</p>
+    <p class="location-date">San Jose, CA — May 2025–Present</p>
+
+    <p class="job-title">UCI Samueli School of Engineering — Software Engineer Research Intern</p>
+    <p class="location-date">Irvine, CA — May 2023–August 2023</p>
+    <ul>
+      <li>Developed AI vision systems for manipulating liquid-solid-vapor phenomena</li>
+      <li>Built deep learning models to predict thermal performance</li>
+    </ul>
+
+    <p class="job-title">Prazen — Software Engineer Intern</p>
+    <p class="location-date">Seoul, South Korea — Mar 2023–Mar 2024</p>
+    <ul>
+      <li>Improved voice recognition to over 90% accuracy with 70° FOV</li>
+      <li>Helped develop AR glasses with advanced optical tech</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Projects</h2>
+    <p><strong>Mosaic</strong> | Python, Flask, JavaScript, Java</p>
+    <ul>
+      <li>Built a real-time speech-to-speech therapy chatbot with personalized interactions</li>
+    </ul>
+
+    <p><strong>Patient Health History</strong> | Python, Java, HTML</p>
+    <ul>
+      <li>Developed a medical history tracker now used in hospitals in San Jose and Mexico</li>
+      <li>Tracks medications, symptoms, and diagnoses per treatment</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Skills & Interests</h2>
+    <ul>
+      <li><strong>Technical:</strong> Python, Java, Kotlin, HTML, C++, AI/ML, Health Informatics</li>
+      <li><strong>Languages:</strong> English, Korean</li>
+      <li><strong>Interests:</strong> Matcha lattes 🍵, music 🎶, design, AR tech 👓</li>
+    </ul>
+  </div>
+
+</body>
+</html>
