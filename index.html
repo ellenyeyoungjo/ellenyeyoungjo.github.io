@@ -13,6 +13,7 @@
       font-family: 'Nunito', sans-serif;
       background-color: #fff6f6;
       color: #444;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -29,6 +30,7 @@
       border-bottom: 2px solid #e8b3b3;
       padding-bottom: 5px;
       margin-top: 40px;
+      animation: fadeInOut 3s ease-in-out infinite alternate;
     }
 
     .banner {
@@ -117,9 +119,9 @@
       border-radius: 12px;
       box-shadow: 0 0 10px #e6dada;
       opacity: 0;
-      transform: scale(0.9);
-      animation: popUp 0.9s ease-out forwards;
-      animation-delay: 1s;
+      transform: scale(0.85);
+      animation: popUpVisible 1.2s ease-out forwards;
+      animation-delay: 0.8s;
       animation-fill-mode: forwards;
     }
 
@@ -138,10 +140,14 @@
       color: #777;
     }
 
-    /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
     }
 
     @keyframes popIn {
@@ -163,10 +169,10 @@
       100% { transform: rotate(0deg); }
     }
 
-    @keyframes popUp {
+    @keyframes popUpVisible {
       0% {
         opacity: 0;
-        transform: scale(0.9);
+        transform: scale(0.85);
       }
       100% {
         opacity: 1;
@@ -183,8 +189,11 @@
 <body>
   <!-- Matcha latte emojis floating -->
   <div class="matcha-emoji" style="left: 10%; animation-delay: 0s;">🍵</div>
-  <div class="matcha-emoji" style="left: 40%; animation-delay: 1s;">🍵</div>
-  <div class="matcha-emoji" style="left: 70%; animation-delay: 2s;">🍵</div>
+  <div class="matcha-emoji" style="left: 25%; animation-delay: 1s;">🎀</div>
+  <div class="matcha-emoji" style="left: 40%; animation-delay: 2s;">🍵</div>
+  <div class="matcha-emoji" style="left: 55%; animation-delay: 3s;">🐰</div>
+  <div class="matcha-emoji" style="left: 70%; animation-delay: 4s;">🍵</div>
+  <div class="matcha-emoji" style="left: 85%; animation-delay: 5s;">🎀</div>
 
   <!-- Full-width Matcha Banner -->
   <img src="banner.jpg" alt="Matcha banner" class="banner" />
@@ -194,14 +203,13 @@
     <img src="profile.jpg" alt="Profile" class="profile-pic" />
     <h1>Hi, I’m Ellen۶•ຕ </h1>
     <p class="tagline">Welcome to my personal website!</p>
-    <p class="intro">✨ I’m passionate about coding and matcha lattes ༺༻</p>
+    <p class="intro">✨ I’m passionate about coding and matcha lattes ᑑᑑ ༺༻</p>
     <a class="button linkedin-button" href="https://www.linkedin.com/in/ellen-yeyoung-jo" target="_blank">LinkedIn</a>
   </div>
 
   <!-- Sections -->
   <div class="section">
     <h2>Work Experience</h2>
-
     <p class="job-title">Cepton / Koito Group</p>
     <p class="location-date">San Jose, CA — May 2025–Present</p>
 
