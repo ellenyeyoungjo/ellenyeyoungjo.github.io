@@ -52,14 +52,16 @@
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
       margin: -75px auto 0 auto;
       display: block;
-}
-
-
-
+      opacity: 0;
+      animation: popIn 1s ease-out forwards;
+    }
 
     .center {
       text-align: center;
       margin-top: -60px;
+      animation: fadeIn 1.2s ease-in forwards;
+      opacity: 0;
+      animation-delay: 0.3s;
     }
 
     .intro {
@@ -85,8 +87,13 @@
       border-radius: 8px;
       text-decoration: none;
       font-family: 'Nunito', sans-serif;
+      transition: transform 0.2s;
     }
-    
+
+    .button:hover {
+      animation: wiggle 0.3s ease;
+    }
+
     .linkedin-button {
       background-color: #cfe6c5;
       color: #2e5d2e;
@@ -100,6 +107,10 @@
       background: white;
       border-radius: 12px;
       box-shadow: 0 0 10px #e6dada;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideUp 1s ease-out forwards;
+      animation-delay: 0.5s;
     }
 
     ul {
@@ -116,19 +127,49 @@
       font-style: italic;
       color: #777;
     }
+
+    /* Animations */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.15);
+        opacity: 1;
+      }
+    }
+
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(1deg); }
+      50% { transform: rotate(-1deg); }
+      75% { transform: rotate(1deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
-
   <!-- Full-width Matcha Banner -->
   <img src="banner.jpg" alt="Matcha banner" class="banner" />
 
   <!-- Floating Profile + Intro -->
   <div class="center">
     <img src="profile.jpg" alt="Profile" class="profile-pic" />
-    <h1>Hi, I’m Ellen </h1>
+    <h1>Hi, I’m Ellen۶•ຕ </h1>
     <p class="tagline">Welcome to my personal website!</p>
-    <p class="intro">✨ I’m passionate about coding and matcha lattes ᕱᕱ ྀི</p>
+    <p class="intro">✨ I’m passionate about coding and matcha lattes ᑑᑑ ༺༻</p>
     <a class="button linkedin-button" href="https://www.linkedin.com/in/ellen-yeyoung-jo" target="_blank">LinkedIn</a>
   </div>
 
