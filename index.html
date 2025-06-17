@@ -59,9 +59,10 @@
     .center {
       text-align: center;
       margin-top: -60px;
-      animation: fadeIn 1.2s ease-in forwards;
       opacity: 0;
+      animation: fadeIn 1.2s ease-in forwards;
       animation-delay: 0.3s;
+      animation-fill-mode: forwards;
     }
 
     .intro {
@@ -110,7 +111,8 @@
       opacity: 0;
       transform: translateY(30px);
       animation: fadeSlideUp 1s ease-out forwards;
-      animation-delay: 0.5s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
     }
 
     ul {
@@ -130,6 +132,7 @@
 
     /* Animations */
     @keyframes fadeIn {
+      from { opacity: 0; }
       to { opacity: 1; }
     }
 
@@ -153,7 +156,11 @@
     }
 
     @keyframes fadeSlideUp {
-      to {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
         opacity: 1;
         transform: translateY(0);
       }
@@ -174,20 +181,6 @@
   </div>
 
   <!-- Sections -->
-  <div class="section">
-    <h2>Projects</h2>
-    <p><strong>Mosaic</strong> | Python, Flask, JavaScript, Java</p>
-    <ul>
-      <li>Built a real-time speech-to-speech therapy chatbot with personalized interactions</li>
-    </ul>
-
-    <p><strong>Patient Health History</strong> | Python, Java, HTML</p>
-    <ul>
-      <li>Developed a medical tracker used in San Jose and Mexico hospitals</li>
-      <li>Tracks medications, symptoms, and diagnoses per treatment</li>
-    </ul>
-  </div>
-
   <div class="section">
     <h2>Work Experience</h2>
 
@@ -210,12 +203,26 @@
   </div>
 
   <div class="section">
+    <h2>Projects</h2>
+    <p><strong>Mosaic</strong> | Python, Flask, JavaScript, Java</p>
+    <ul>
+      <li>Built a real-time speech-to-speech therapy chatbot with personalized interactions</li>
+    </ul>
+
+    <p><strong>Patient Health History</strong> | Python, Java, HTML</p>
+    <ul>
+      <li>Developed a medical tracker used in San Jose and Mexico hospitals</li>
+      <li>Tracks medications, symptoms, and diagnoses per treatment</li>
+    </ul>
+  </div>
+
+  <div class="section">
     <h2>Skills & Education</h2>
     <ul>
       <li><strong>University of Illinois at Urbana-Champaign</strong> — CS + Music, Business Minor (Sept 2028)</li>
       <li><strong>Skills:</strong> Python, Java, Kotlin, HTML, C++, AI/ML, Health Informatics</li>
       <li><strong>Languages:</strong> English, Korean</li>
-      <li><strong>Fun fact:</strong> Loves cafe-hopping, design, and AR tech 🌸</li>
+      <li><strong>Fun fact:</strong> I love cafe-hopping, design, and AR tech 🌸</li>
     </ul>
   </div>
 
