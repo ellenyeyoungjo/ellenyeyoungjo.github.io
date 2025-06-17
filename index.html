@@ -80,6 +80,14 @@
       margin: 0.2em 0;
     }
 
+    .matcha-emoji {
+      position: fixed;
+      font-size: 1.4em;
+      animation: floatMatcha 6s linear infinite;
+      pointer-events: none;
+      z-index: 10;
+    }
+
     .button {
       display: inline-block;
       padding: 10px 20px;
@@ -109,8 +117,8 @@
       border-radius: 12px;
       box-shadow: 0 0 10px #e6dada;
       opacity: 0;
-      transform: translateY(30px);
-      animation: fadeSlideUp 1s ease-out forwards;
+      transform: scale(0.9);
+      animation: popUp 0.9s ease-out forwards;
       animation-delay: 1s;
       animation-fill-mode: forwards;
     }
@@ -155,19 +163,29 @@
       100% { transform: rotate(0deg); }
     }
 
-    @keyframes fadeSlideUp {
+    @keyframes popUp {
       0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: scale(0.9);
       }
       100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
       }
+    }
+
+    @keyframes floatMatcha {
+      0% { transform: translateY(0) rotate(0); opacity: 1; }
+      100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
     }
   </style>
 </head>
 <body>
+  <!-- Matcha latte emojis floating -->
+  <div class="matcha-emoji" style="left: 10%; animation-delay: 0s;">🍵</div>
+  <div class="matcha-emoji" style="left: 40%; animation-delay: 1s;">🍵</div>
+  <div class="matcha-emoji" style="left: 70%; animation-delay: 2s;">🍵</div>
+
   <!-- Full-width Matcha Banner -->
   <img src="banner.jpg" alt="Matcha banner" class="banner" />
 
@@ -222,9 +240,8 @@
       <li><strong>University of Illinois at Urbana-Champaign</strong> — CS + Music, Business Minor (Sept 2028)</li>
       <li><strong>Skills:</strong> Python, Java, Kotlin, HTML, C++, AI/ML, Health Informatics</li>
       <li><strong>Languages:</strong> English, Korean</li>
-      <li><strong>Fun fact:</strong> I love cafe-hopping, design, and AR tech 🌸</li>
+      <li><strong>Fun fact:</strong> Loves cafe-hopping, design, and AR tech 🌸</li>
     </ul>
   </div>
-
 </body>
 </html>
